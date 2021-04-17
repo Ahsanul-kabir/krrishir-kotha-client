@@ -1,0 +1,8 @@
+.table-content thead{
+    background-color: #fff;
+}
+.table-content{
+    background-color: #F5F6FA;
+    padding: 50px;
+    border-radius: 10px;
+}

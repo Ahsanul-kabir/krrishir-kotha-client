@@ -1,0 +1,12 @@
+.carousel-slider{
+    background-color:#111430;
+    padding: 50px 0;
+}
+
+.carousel-card {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+  }
