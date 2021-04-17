@@ -15,7 +15,6 @@ import Review from './components/Dashboard/Review/Review';
 import ServiceDetails from './components/Dashboard/ServiceDetails/ServiceDetails';
 import AddService from './components/Dashboard/AddService/AddService';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
-// import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 
 export const UserContext = createContext();
 
