@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const onSubmit = data => {
-        fetch('http://localhost:4000/makeAdmin',{
+        fetch('https://cryptic-island-29877.herokuapp.com/makeAdmin',{
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

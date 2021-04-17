@@ -4,7 +4,7 @@ import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import Topbar from '../Topbar/Topbar';
 
-const AddService = () => {    
+const AddService = () => {
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
 
@@ -29,7 +29,7 @@ const AddService = () => {
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('http://localhost:4000/addService', {
+        fetch('https://cryptic-island-29877.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })
@@ -58,7 +58,7 @@ const AddService = () => {
                         </div>
                         <div className="form-group">
                             <textarea onBlur={handleBlur} type="text" ref={register({ required: false })} placeholder="Description" className="form-control" name="description" id="" cols="10" rows="3"></textarea>
-                        </div>                                                
+                        </div>
                         <div className="form-group">
                             <label htmlFor="file">Icon</label>
                             <input onChange={handleFileChange} ref={register({ required: false })} type="file" style={{ width:'48%'}} className="form-control" name="file" placeholder="Upload project File" id=""/>
@@ -67,7 +67,7 @@ const AddService = () => {
                             <button type="submit" className="btn main-btn" style={{textTransform: 'uppercase'}}>Send</button>
                         </div>
                     </form>
-                </div>                
+                </div>
             </div>
         </div>
     );

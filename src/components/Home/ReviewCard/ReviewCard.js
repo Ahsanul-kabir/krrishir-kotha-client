@@ -9,7 +9,7 @@ const ReviewCard = ({review}) => {
                     {
                         review.image ? <img style={{width: '20%'}} src={`data:image/png;base64,${review.image.img}`}/>
                         :
-                        <img style={{width: '20%'}} className="img-fluid mb-3" src={`http://localhost:4000/${review.img}`} alt=""/>
+                        <img style={{width: '20%'}} className="img-fluid mb-3" src={`https://cryptic-island-29877.herokuapp.com/${review.img}`} alt=""/>
                     }
                     <div className="ml-3 mt-3">
                         <h5>{review.name}</h5>
