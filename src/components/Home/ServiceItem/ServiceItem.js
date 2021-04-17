@@ -14,7 +14,7 @@ const ServiceItem = ({service}) => {
                 {
                     service.image ? <img style={{width: '50px'}} src={`data:image/png;base64,${service.image.img}`}/>
                     :
-                    <img style={{width: '50px'}} className="img-fluid mb-3" src={`https://cryptic-island-29877.herokuapp.com/${service.img}`} alt=""/>
+                    <img style={{width: '50px'}} className="img-fluid mb-3" src={`http://localhost:4000/${service.img}`} alt=""/>
                 }
                 <h5 className="my-4">{service.title}</h5>
                 <p style={{color: '#707070'}}>{service.description}</p>

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useContext} from 'react';
+import {useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import Topbar from '../Topbar/Topbar';
@@ -19,7 +19,7 @@ const Order = () => {
     const onSubmit = data => {
         data.created = new Date();
 
-        fetch('https://cryptic-island-29877.herokuapp.com/addOrder',{
+        fetch('http://localhost:4000/addOrder',{
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

@@ -15,11 +15,13 @@ import Review from './components/Dashboard/Review/Review';
 import ServiceDetails from './components/Dashboard/ServiceDetails/ServiceDetails';
 import AddService from './components/Dashboard/AddService/AddService';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
+// import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
     <Router>
@@ -45,6 +47,9 @@ function App() {
         <Route path="/review">
           <Review></Review>
         </Route>
+        <PrivateRoute path="/dashboard">
+        <Order></Order>
+        </PrivateRoute>
         <PrivateRoute path="/order/:name">
           <Order></Order>
         </PrivateRoute>

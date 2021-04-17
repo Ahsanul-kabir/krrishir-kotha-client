@@ -29,7 +29,7 @@ const AddService = () => {
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('https://cryptic-island-29877.herokuapp.com/addService', {
+        fetch('http://localhost:4000/addService', {
             method: 'POST',
             body: formData
         })

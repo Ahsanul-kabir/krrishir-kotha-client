@@ -31,7 +31,7 @@ const Review = () => {
         formData.append('designation', info.designation);
         formData.append('description', info.description);
 
-        fetch('https://cryptic-island-29877.herokuapp.com/addReview', {
+        fetch('http://localhost:4000/addReview', {
             method: 'POST',
             body: formData
         })

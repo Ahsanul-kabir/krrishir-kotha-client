@@ -9,7 +9,6 @@ const Header = () => {
         <div className="header-container">
             <Navbar></Navbar>
             <HeaderContent></HeaderContent>
-            <Brands></Brands>
         </div>
     );
 };

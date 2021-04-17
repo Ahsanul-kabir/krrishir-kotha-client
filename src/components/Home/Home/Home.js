@@ -1,4 +1,5 @@
 import React from 'react';
+import Brands from '../Brands/Brands';
 import CarouselSlider from '../CarouselSlider/CarouselSlider';
 import Contact from '../Contact/Contact';
 import Header from '../Header/Header';
@@ -12,6 +13,7 @@ const Home = () => {
             <Service></Service>
             <CarouselSlider></CarouselSlider>
             <Review></Review>
+            <Brands></Brands>
             <Contact></Contact>
         </div>
     );

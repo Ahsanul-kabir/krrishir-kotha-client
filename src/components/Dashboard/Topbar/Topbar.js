@@ -7,7 +7,7 @@ const Topbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand" href="#">Order</a>
+            <a class="navbar-brand" href="#">Dashboard</a>
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">

@@ -8,7 +8,8 @@ import brand4 from '../../../resources/images/brand4.jpg'
 const Brands = () => {
     return (
         <div className="container">
-            <div style={{marginTop: "80px"}} className="row d-flex justify-content-center">
+            <h1 style={{textAlign:"center"}}>Our Brands</h1>
+            <div style={{margin:"50px 0 10px 30%"}} className="row d-flex justify-content-center">
                 <div className="col-md-10 offset-md-1 brand-logo">
                     <img src={brand1} alt=""/>
                     <img src={brand4} alt=""/>
