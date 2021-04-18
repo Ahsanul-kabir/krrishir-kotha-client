@@ -6,7 +6,7 @@ const DeleteService = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:4000/services')
+            const response = await fetch('https://cryptic-island-29877.herokuapp.com/services')
             const data = await response.json()
             setService(data)
         }

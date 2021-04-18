@@ -1,1 +1,1 @@
-export const serverURL="http://localhost:4000"
+export const serverURL="https://cryptic-island-29877.herokuapp.com"
