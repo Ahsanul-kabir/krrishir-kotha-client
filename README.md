@@ -1,5 +1,5 @@
 # Krrishir kotha
-[Click to Open Live Website]()
+[Click to Open Live Website](https://krrishir-kotha.web.app/)
 
 ___
 ### Features

@@ -44,7 +44,7 @@ const SimpleCardForm = ({handlePayment}) => {
         <div>
             <form onSubmit={handleSubmit}>
                 <CardElement />
-                <button type="submit" disabled={!stripe}>Pay</button>
+                <button type="submit" className="btn main-btn" style={{ textTransform: 'uppercase' }} disabled={!stripe}>Pay</button>
             </form>
 
             {
