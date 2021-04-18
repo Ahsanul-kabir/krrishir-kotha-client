@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import './Sidebar.css'
 import logo from "../../../resources/images/logos/logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus, faList, faCommentDots, faPlus, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faList, faCommentDots, faPlus, faUserPlus,faMinus } from '@fortawesome/free-solid-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
 import { UserContext } from '../../../App';
 import { serverURL } from '../../../Settings';
@@ -23,6 +23,11 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
                 </Link>
             </li>
+            <li>
+                <Link to="/deleteService/:`${name}`" className="text-dark">
+                    <FontAwesomeIcon icon={faMinus} /> <span>Delete Service</span>
+                </Link>
+            </li>
                 <li>
                     <Link to="/makeadmin" className="text-dark">
                         <FontAwesomeIcon icon={faUserPlus} /> <span>Make Admin</span>
@@ -30,7 +35,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link to="/service" className="text-dark">
-                        <FontAwesomeIcon icon={faList} /> <span>Manage Service</span>
+                        <FontAwesomeIcon icon={faList} /> <span>Manage Orders</span>
                     </Link>
                 </li></>)
         } else {
@@ -51,7 +56,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link to="/servicedetails" className="text-dark">
-                        <FontAwesomeIcon icon={faListAlt} /> <span>Service List</span>
+                        <FontAwesomeIcon icon={faListAlt} /> <span>Order List</span>
                     </Link>
                 </li></>)
         }
@@ -66,11 +71,11 @@ const Sidebar = () => {
     }, [])
 
     useEffect(() => {
-        console.log({ admins })
+        // console.log({ admins })
         for (let admin of admins) {
-            console.log({ admin, loggedInUser })
+            // console.log({ admin, loggedInUser })
             if (admin.email === loggedInUser.email) {
-                console.log("YES ADMIN")
+                // console.log("YES ADMIN")
                 setAdmin(true)
             }
         }

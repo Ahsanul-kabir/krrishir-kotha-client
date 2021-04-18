@@ -29,6 +29,7 @@ const MakeAdmin = () => {
             <div className="col-md-10">
                 <Topbar></Topbar>
                 <div style={{width: '100%', background: '#F5F6FA', borderRadius: '10px', padding: '30px 50px'}} className="col-md-6 mt-5">
+                    <h5>Make Admin</h5>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <input type="email" ref={register({ required: true })} name="email" placeholder="Email" className="form-control" />
@@ -38,7 +39,7 @@ const MakeAdmin = () => {
                             <button type="submit" className="btn main-btn" style={{textTransform: 'uppercase'}}>Submit</button>
                         </div>
                     </form>
-                </div>                
+                </div>
             </div>
         </div>
     );

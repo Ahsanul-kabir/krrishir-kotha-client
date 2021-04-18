@@ -18,7 +18,7 @@ const breakPoints = [
 const CarouselSlider = () => {
     return (
         <div className="carousel-slider">
-            <h1 style={{ textAlign: "center", color: "#fff"}}>Here are some of <span style={{color:'#7AB259'}}>best products</span></h1>
+            <h1 style={{ textAlign: "center", color: "#fff"}}>Here are some of <span style={{color:'orange'}}>best products</span></h1>
             <div className="carousel-card">
                 <Carousel breakPoints={breakPoints}>
                 <CarouselCard><img className="img-fluid" style={{borderRadius: "10px"}} src={slide1} alt=""/></CarouselCard>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import logo from '../../../resources/images/logos/logo.png'
 
 const Navbar = () => {
     const { name } = useParams();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div className="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -24,11 +26,11 @@ const Navbar = () => {
                             <Link class="nav-link mr-4" to="/order/:`${name}`">Dashboard</Link>
                         </li>
                         <li>
-                            <Link to="/order/:`${name}`" ><button className="btn main-btn">Login</button></Link>
+                            <Link to="/login" ><button className="btn main-btn">{loggedInUser.name || 'Login'}</button></Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <button className="btn main-btn ml-1" onClick={() => { sessionStorage.clear() }}>LogOut</button>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </nav>
