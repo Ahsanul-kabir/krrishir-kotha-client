@@ -27,6 +27,7 @@ const AddService = () => {
         console.log(info);
         formData.append('file', file);
         formData.append('title', info.title);
+        formData.append('price', info.price);
         formData.append('description', info.description);
 
         fetch('http://localhost:4000/addService', {
@@ -55,6 +56,10 @@ const AddService = () => {
                         <div className="form-group">
                             <input onBlur={handleBlur} type="text" ref={register({ required: true })} name="title" placeholder="Service Title" className="form-control" />
                             {errors.title && <span className="text-danger">This field is required</span>}
+                        </div>
+                        <div className="form-group">
+                            <input onBlur={handleBlur} type="text" ref={register({ required: true })} name="price" placeholder="Product Price" className="form-control" />
+                            {errors.price && <span className="text-danger">This field is required</span>}
                         </div>
                         <div className="form-group">
                             <textarea onBlur={handleBlur} type="text" ref={register({ required: false })} placeholder="Description" className="form-control" name="description" id="" cols="10" rows="3"></textarea>

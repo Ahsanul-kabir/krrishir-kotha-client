@@ -56,7 +56,7 @@ const Order = () => {
                                 {errors.email && <span className="text-danger">This field is required</span>}
                             </div>
                             <div className="form-group">
-                                <input type="text" ref={register({ required: true })} name="service" placeholder="Service Name" className="form-control" />
+                                <input type="text" ref={register({ required: true })} name="service" defaultValue={name} placeholder="Service Name" className="form-control" />
                                 {errors.service && <span className="text-danger">This field is required</span>}
                             </div>
                             <div className="form-group">
